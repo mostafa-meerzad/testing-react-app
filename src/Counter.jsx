@@ -19,7 +19,7 @@ const Counter = ({ initialCount = 0 }) => {
     <div className="counter">
       <h1 className="title">Counter</h1>
 
-      <p className="count">{count}</p>
+      <p className="count" data-testid="initial-count">{count}</p>
 
       <div className="btn-container">
         <button className="btn" onClick={increment}>
