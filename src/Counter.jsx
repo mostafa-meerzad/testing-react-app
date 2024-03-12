@@ -1,8 +1,7 @@
 import { useState } from "react";
-import "./App.css";
 
-const App = () => {
-  const [count, setCount] = useState(0);
+const Counter = ({ initialCount = 0 }) => {
+  const [count, setCount] = useState(initialCount);
   const increment = () => {
     setCount(count + 1);
   };
@@ -17,7 +16,7 @@ const App = () => {
   };
 
   return (
-    <main>
+    <div className="counter">
       <h1 className="title">Counter</h1>
 
       <p className="count">{count}</p>
@@ -36,7 +35,7 @@ const App = () => {
           reset
         </button>
       </div>
-    </main>
+    </div>
   );
 };
-export default App;
+export default Counter;
